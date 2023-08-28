@@ -33,7 +33,7 @@ userRouter.post("/login", async (req, res) => {
 
     const user = await User.findOne({ email });
 // console.log(email,password)
-// console.log(user)
+// console.log(user,"userdata")
     if (!user) {
       res.status(200).json({ message: "First sign up" });
     } else {

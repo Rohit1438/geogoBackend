@@ -45,11 +45,11 @@ const auth = async (req, res, next) => {
       //   userID: decoded.userID,
       //   username: decoded.username,
       // };
-
+console.log(token,decoded,"ttokkk")
       req.body.userID = decoded.userId;
 
       req.body.username = decoded.username;
-console.log(req.body,"previous")
+console.log(req.body.username,"previously")
       next();
     } else {
       return res.status(401).json({ msg: "Not authorized to perform this operation" });
